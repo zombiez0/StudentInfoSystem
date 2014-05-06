@@ -1,0 +1,13 @@
+{
+    "name": "studentdb",
+    "version": "1.0.0",
+    "dependencies": {
+        "angular": "latest",
+        "font-awesome": "latest",
+        "angular-ui-bootstrap": "latest",
+        "angular-ui-router": "latest",
+        "angular-ui-utils" : "latest",
+        "jquery" : "latest",
+        "restangular" : "latest" 
+    }
+}
