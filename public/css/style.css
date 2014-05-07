@@ -17,7 +17,6 @@ input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 19+ */
 ::-moz-focus-inner {border:0;}  /* To remove outline from button */
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="submit"]:focus {
-	
 	outline: 0;
 }
 
@@ -27,6 +26,7 @@ body{
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 
@@ -34,6 +34,7 @@ header.header{
   background: #777;
   border-radius: 0;
   min-height: 60px;
+  margin-bottom: 0;
 }
 
 header span{
@@ -44,17 +45,128 @@ header i.fa-users{
   vertical-align: middle;
 }
 
-header span.logo-container{
+header div.logo-container{
   line-height: 58px;
 }
 
-header span.logo-label{
-  line-height: 50px;
+header div.logo-container .fa-users.visible-xs{
+  line-height: 58px;
+}
+
+header div.logo-label{
   margin-left: 10px;
 }
 
-header label.header-lbl{
+header h3.header-lbl{
   color: #eaeaea;
-  font-size: 26px;
   vertical-align: middle;
+}
+
+header h3{
+  margin-top: 16px;
+}
+
+header h4{
+  margin-top: 21px;
+}
+
+div.menu{
+  background: #dadada;
+  box-shadow: -1px 0px 3px 2px #888;
+  -moz-box-shadow: -1px 0px 3px 2px #888;
+  -webkit-box-shadow: -1px 0px 3px 2px #888;
+  height: 40px;
+}
+
+ul.menu-items{
+  margin-bottom: 0;
+  margin-left: -10px;
+}
+
+ul.menu-items li{
+ 
+  cursor: pointer;
+  padding: 10px 15px 8px 15px;
+}
+
+ul.menu-items li:hover,ul.menu-items li.active{
+  background: #eaeaea;
+}
+
+ul.menu-items a{
+  
+  font-size: 16px;
+  margin: 0 20px 0 5px;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+ul.menu-items a:hover{
+  text-decoration: none;
+}
+
+div.search-wrapper{
+  position: relative;
+}
+
+div.menu-wrapper{
+  position: relative;
+}
+
+div.menu-resp-opener {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+div.search-wrapper .fa-search{
+  position: absolute;
+  top:13px;
+  right: 7px;
+  cursor: pointer;
+}
+
+input.search-field{
+  border-radius: 4px;
+  padding: 5px 30px 5px 5px;
+  border: 1px solid #777;
+  vertical-align: middle;
+}
+
+span.search-blk{
+  display: inline-block;
+  line-height: 39px;
+}
+
+div.menu-sticky{
+  position: fixed;
+  width: 100%;
+  top:0;
+}
+
+/* Extra Small */
+@media(max-width:767px){
+
+  div.menu-resp-opener+ul {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    background: #fff;
+
+  }
+
+  div.menu-resp-opener+ul >li {
+      float:none;
+  }
+
+}
+
+/* Res above 768 */
+@media(min-width:767px){
+
+
+  div.menu-resp-opener+ul >li {
+      float:left;
+
+  }
+
 }
