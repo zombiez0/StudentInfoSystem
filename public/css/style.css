@@ -141,6 +141,17 @@ div.menu-sticky{
   position: fixed;
   width: 100%;
   top:0;
+  z-index: 10;
+}
+
+ul.student-list-container {
+  
+}
+
+li.student-add, li.student-item{
+  height: 210px;
+  box-shadow: 2px 1px 5px #888;
+  margin-top:35px;
 }
 
 /* Extra Small */
@@ -151,11 +162,17 @@ div.menu-sticky{
     top: 40px;
     left: 30px;
     background: #fff;
-
+    z-index: 1;
   }
 
   div.menu-resp-opener+ul >li {
       float:none;
+  }
+
+  li.student-add, li.student-item{
+      float: none !important;
+      margin-left: auto;
+      margin-right: auto;
   }
 
 }
@@ -166,6 +183,11 @@ div.menu-sticky{
 
   div.menu-resp-opener+ul >li {
       float:left;
+  }
+
+  li.student-add, li.student-item{
+      float: left;
+      margin-left: 45px;
 
   }
 
