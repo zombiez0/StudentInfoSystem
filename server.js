@@ -9,11 +9,13 @@ var configDB = require(__dirname + '/public/scripts/database.js');
 //mongoose.connect(configDB.url);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
-
+app.use(require('prerender-node').set('prerenderToken', 'YOUR-TOKEN-HERE'));
 
 //http://vladimirfeskov.com/posts/angularjs-html5-mode-setup-use-and-seo
+//http://scotch.io/quick-tips/js/angular/pretty-urls-in-angularjs-removing-the-hashtag
 
-app.get('/[^\.]+$', function(req, res){
+
+app.get('*', function(req, res){
     res.set('Content-Type', 'text/html')
         .sendfile(__dirname + '/public/html/index.html');
 });

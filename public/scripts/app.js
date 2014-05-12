@@ -6,18 +6,23 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 	$stateProvider
 		.state('home', {
 			url : '/home',
-			templateUrl : '/html/home.html'
+			templateUrl : '/html/home.html',
+			controller : 'studentListController'
+
 		})
 		.state('events', {
 			url : '/events',
-			templateUrl : '/html/events.html'			
+			templateUrl : '/html/events.html',
+			controller : 'eventListController'			
 		})
 		.state('about', {
-			url : '/about'
+			url : '/about',
+			templateUrl : '/html/about.html',
+			controller : 'aboutController'
 		})		
 
 		// use the HTML5 History API
-		$locationProvider.html5Mode(true);
+		$locationProvider.html5Mode(true).hashPrefix('!');
 });
 
 app.run(function($rootScope) {
@@ -53,15 +58,35 @@ app.run(function($rootScope) {
 });
 
 app.controller('appController', function($scope) {
-	
+	console.log("inside home controller");
+	$scope.$parent.seo = {
+        pageTitle : 'studentinfosysapp',
+        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp'
+    };
 });
 
 app.controller('studentListController', function($scope) {
-	
+	console.log("inside student controller");
+	$scope.$parent.seo = {
+        pageTitle : 'studentinfosysapp',
+        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp'
+    };
 });
 
 app.controller('eventListController', function($scope) {
+	console.log("inside event controller");
+	$scope.$parent.seo = {
+        pageTitle : 'studentinfosysapp',
+        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp - Events page'
+    };
+});
 
+app.controller('aboutController', function($scope) {
+	console.log("inside about controller");
+	// $scope.$parent.seo = {
+ //        pageTitle : 'AngularJS SEO Tutorial',
+ //        pageDescripton: 'Welcome to our tutorial on getting your AngularJS websites and apps indexed by Google.'
+ //    };
 })
 	
 
