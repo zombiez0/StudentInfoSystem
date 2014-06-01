@@ -50,7 +50,7 @@ app.run(function($rootScope) {
 
                 $rootScope.seo = {
 			        pageTitle : title,
-			        pageDescripton: description
+			        metaDescription: description
     			};
         });
 
