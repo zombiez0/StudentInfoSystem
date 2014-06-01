@@ -28,7 +28,8 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 app.run(function($rootScope) {
 	$rootScope
         .$on('$stateChangeStart', 
-            function(event, toState, toParams, fromState, fromParams){ 
+            function(event, toState, toParams, fromState, fromParams){
+            	$rootScope.$activeTab = toState.url;
                 console.log("State Change: transition begins!");
         });
 
@@ -94,7 +95,7 @@ app.controller('aboutController', function($scope) {
 /* Sticky Header */
 var $menu = document.querySelector('#nav-menu');
 window.onscroll = function() {
-	if(window.pageYOffset > 60){
+	if(window.pageYOffset > 65){
 		$menu.className = "menu cf menu-sticky";
 	}else{
 		$menu.className = "menu cf";

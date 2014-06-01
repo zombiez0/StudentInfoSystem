@@ -6,6 +6,10 @@
 	<meta name="fragment" content="!">
 	<meta name="description" content="{{ seo.metaDescription }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+
+
 	<link rel='stylesheet' type='text/css' href='../css/bootstrap/bootstrap.min.css'/>
 	<link rel='stylesheet' type='text/css' href='../css/normalize.css'/>
 	<link rel='stylesheet' type='text/css' href='../css/clearfix.css'/>
@@ -24,8 +28,7 @@
 	<header class="navbar header">
 		<div class="container cf">
 			<div class="logo-container pull-left">
-				<i class="fa fa-users fa-3x hidden-xs"></i>
-				<i class="fa fa-users fa-3x visible-xs"></i>
+				<img src="../images/logo.png" />
 			</div>
 			<div class="logo-label  pull-left">
 				<h3 class="hidden-xs">Student Information System</h3>
@@ -37,9 +40,9 @@
 		<div class="container menu-wrapper cf">
 			<div class="menu-resp-opener visible-xs col-xs-2"><i class="fa fa-th-list fa-2x visible-xs"></i></div>
 			<ul class="menu-items pull-left cf">
-				<li ui-sref="home"><i class="fa fa-lg fa-home"></i><a>Home</a></li>
-				<li ui-sref="events"><i class="fa fa-lg fa-calendar"></i><a>Events</a></li>
-				<li ui-sref="about"><i class="fa fa-lg fa-user"></i><a>About</a></li>
+				<li ng-class="{menuActive : $activeTab === '/home'}" ui-sref="home"><i class="fa fa-lg fa-home"></i><a>Home</a></li>
+				<li ng-class="{menuActive : $activeTab === '/events'}" ui-sref="events"><i class="fa fa-lg fa-calendar"></i><a>Events</a></li>
+				<li ng-class="{menuActive : $activeTab === '/about'}" ui-sref="about"><i class="fa fa-lg fa-user"></i><a>About</a></li>
 			</ul>
 			<div class="search-wrapper pull-right">
 				<span class="search-blk"><input class="search-field" type="text" placeholder="Search" /></span>
@@ -47,7 +50,7 @@
 			</div>
 		</div>	
 	</div>
-	<div class="container">
+	<div class="data-container container">
 		<div ui-view class="content-wrapper">
 			
 		</div>

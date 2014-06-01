@@ -16,7 +16,8 @@ app.use(require('prerender-node').set('prerenderToken', 'YOUR-TOKEN-HERE'));
 
 //http://vladimirfeskov.com/posts/angularjs-html5-mode-setup-use-and-seo
 //http://scotch.io/quick-tips/js/angular/pretty-urls-in-angularjs-removing-the-hashtag
-
+//http://scotch.io/tutorials/javascript/angularjs-seo-with-prerender-io
+//https://github.com/steeve/angular-seo
 
 app.get('*', function(req, res){
     res.set('Content-Type', 'text/html')
