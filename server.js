@@ -12,7 +12,7 @@ var configDB = require(__dirname + '/public/scripts/database.js');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
 app.use(logfmt.requestLogger());
-app.use(require('prerender-node').set('prerenderToken', 'YOUR-TOKEN-HERE'));
+app.use(require('prerender-node').set('prerenderToken', '0SWH5ZjfHK0nACDhpx6E'));
 
 //http://vladimirfeskov.com/posts/angularjs-html5-mode-setup-use-and-seo
 //http://scotch.io/quick-tips/js/angular/pretty-urls-in-angularjs-removing-the-hashtag

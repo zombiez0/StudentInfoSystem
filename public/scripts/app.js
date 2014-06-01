@@ -31,6 +31,27 @@ app.run(function($rootScope) {
             function(event, toState, toParams, fromState, fromParams){
             	$rootScope.$activeTab = toState.url;
                 console.log("State Change: transition begins!");
+
+                var title, description;
+                switch($rootScope.$activeTab) {
+                	case '/home' :  title = 'Home';
+                					description = 'Welcome to Student Information System by chetananand for SEO, studentinfosysapp';
+                					break;
+
+                	case '/events' :  title = 'Events';
+                					description = 'Welcome to Student Information System by chetananand for SEO, studentinfosysapp - Events page'
+                					break;
+                					
+                	case '/about' :  title = 'About';
+                					description = 'Welcome to Student Information System by chetananand for SEO - About';
+                					break;									
+                }
+
+
+                $rootScope.seo = {
+			        pageTitle : title,
+			        pageDescripton: description
+    			};
         });
 
     $rootScope
@@ -60,34 +81,18 @@ app.run(function($rootScope) {
 
 app.controller('appController', function($scope) {
 	console.log("inside home controller");
-	$scope.$parent.seo = {
-        pageTitle : 'studentinfosysapp',
-        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp'
-    };
 });
 
 app.controller('studentListController', function($scope) {
 	console.log("inside student controller");
-	$scope.$parent.seo = {
-        pageTitle : 'studentinfosysapp',
-        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp'
-    };
 });
 
 app.controller('eventListController', function($scope) {
 	console.log("inside event controller");
-	$scope.$parent.seo = {
-        pageTitle : 'studentinfosysapp',
-        pageDescripton: 'Welcome to (MEAN) test page indexed by chetananand for SEO, studentinfosysapp - Events page'
-    };
 });
 
 app.controller('aboutController', function($scope) {
 	console.log("inside about controller");
-	// $scope.$parent.seo = {
- //        pageTitle : 'AngularJS SEO Tutorial',
- //        pageDescripton: 'Welcome to our tutorial on getting your AngularJS websites and apps indexed by Google.'
- //    };
 })
 	
 
