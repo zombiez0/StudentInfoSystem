@@ -2,7 +2,7 @@ var app = angular.module('studentApp', ['ui.bootstrap', 'ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/');
 	$stateProvider
 		.state('home', {
 			url : '/home',
