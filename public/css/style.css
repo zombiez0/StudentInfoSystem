@@ -238,6 +238,31 @@ li.student-add, li.student-item{
   margin-top:59px;
 }
 
+div.menu-st-right{
+  line-height: 40px;
+}
+
+input.expandField{
+  width:230px;
+  -webkit-transition:width 0.5s ease-in-out;
+}
+
+div.menu-st-search >div:first-child{
+  margin-right: 10px;
+}
+
+div.menu-st-login{
+  margin-right: 15px;
+}
+
+div.menu-st-login a{
+  cursor: pointer;
+}
+
+div.menu-st-login a:hover{
+  color: #fff;
+}
+
 /* Extra Small */
 @media(max-width:767px){
 

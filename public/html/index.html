@@ -38,16 +38,28 @@
 	</header>
 	<div id="nav-menu" class="menu cf">
 		<div class="container menu-wrapper cf">
-			<div class="menu-resp-opener visible-xs col-xs-2"><i class="fa fa-th-list fa-2x visible-xs"></i></div>
-			<ul class="menu-items pull-left cf">
-				<li ng-class="{menuActive : $activeTab === '/home'}" ui-sref="home"><i class="fa fa-lg fa-home"></i><a>Home</a></li>
-				<li ng-class="{menuActive : $activeTab === '/events'}" ui-sref="events"><i class="fa fa-lg fa-calendar"></i><a>Events</a></li>
-				<li ng-class="{menuActive : $activeTab === '/about'}" ui-sref="about"><i class="fa fa-lg fa-user"></i><a>About</a></li>
-			</ul>
-			<div class="search-wrapper pull-right">
-				<span class="search-blk"><input class="search-field" type="text" placeholder="Search" /></span>
-				</span><i class="fa fa-lg fa-search"></i></span>
+			<div class="pull-left cf">
+				<div class="menu-resp-opener visible-xs col-xs-2"><i class="fa fa-th-list fa-2x visible-xs"></i></div>
+				<ul class="menu-items pull-left cf">
+					<li ng-class="{menuActive : $activeTab === '/home'}" ui-sref="home"><i class="fa fa-lg fa-home"></i><a>Home</a></li>
+					<li ng-class="{menuActive : $activeTab === '/events'}" ui-sref="events"><i class="fa fa-lg fa-calendar"></i><a>Events</a></li>
+					<li ng-class="{menuActive : $activeTab === '/about'}" ui-sref="about"><i class="fa fa-lg fa-user"></i><a>About</a></li>
+				</ul>
 			</div>
+
+			<div class="pull-right menu-st-right cf">
+				<div class="pull-left menu-st-login"><a>Login</a></div>
+				<div class="pull-left menu-st-search cf">
+					<div class="pull-left">
+						<input class="search-field" type="text" placeholder="Search" />
+					</div>
+					<div class="pull-left">
+						<i class="fa fa-lg fa-search"></i>
+					</div>
+				</div>
+			</div>	
+
+			
 		</div>	
 	</div>
 	<div class="data-container container">

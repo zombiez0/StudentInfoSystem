@@ -19,6 +19,10 @@ app.use(require('prerender-node').set('prerenderToken', '0SWH5ZjfHK0nACDhpx6E'))
 //http://scotch.io/tutorials/javascript/angularjs-seo-with-prerender-io
 //https://github.com/steeve/angular-seo
 
+//http://tympanus.net/codrops/2013/06/26/expanding-search-bar-deconstructed/
+//http://www.callmenick.com/2013/04/03/expanding-search-bar-using-css-transitions/
+//http://www.bootply.com/117591#
+
 app.get('*', function(req, res){
     res.set('Content-Type', 'text/html')
         .sendfile(__dirname + '/public/html/index.html');
