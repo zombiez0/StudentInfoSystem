@@ -23,6 +23,17 @@ app.use(require('prerender-node').set('prerenderToken', '0SWH5ZjfHK0nACDhpx6E'))
 //http://www.callmenick.com/2013/04/03/expanding-search-bar-using-css-transitions/
 //http://www.bootply.com/117591#
 
+/* Express Router */
+var router = express.Router();
+
+/* Models */
+var studentModel = require('./models/Student')
+
+require('./route/routes.js')(app, router, studentModel);
+
+/* Register the routes */
+app.use('/api', router);
+
 app.get('*', function(req, res){
     res.set('Content-Type', 'text/html')
         .sendfile(__dirname + '/public/html/index.html');
