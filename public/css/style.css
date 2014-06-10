@@ -263,6 +263,34 @@ div.menu-st-login a:hover{
   color: #fff;
 }
 
+div.student-male-generic, div.student-female-generic{
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+}
+
+div.student-pic-container{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+div.student-male-generic{
+  background: url(/images/default_avatar_male_1.png) no-repeat;
+}
+
+div.student-female-generic{
+  background: url(/images/default_avatar_female_1.png) no-repeat;
+}
+
+div.student-item-info{
+  padding-left: 15px;
+}
+
+li.student-item label{
+  margin-bottom: 0;
+}
+
 /* Extra Small */
 @media(max-width:767px){
 
