@@ -42,6 +42,9 @@ ul {
 
 }
 
+html,body{
+  height: 100%;
+}
 
 header.header{
   background: #4f85bb; /* Old browsers */
@@ -143,12 +146,14 @@ ul.menu-items li:hover a{
 
 div.content-wrapper{
   background: rgba(242,242,242, 0.7);
+  height: 100%;
 }
 
 div.data-container{
   padding: 0;
   box-shadow: -5px 0 5px -5px #777, 5px 0 5px -5px #777;
   background: url('../image/secailles.png');
+  height: 100%;
 }
 
 ul.menu-items a{
@@ -289,6 +294,71 @@ div.student-item-info{
 
 li.student-item label{
   margin-bottom: 0;
+}
+
+div.social-icon-linkedin{
+  background: url(/images/linkedin-final-hover.png) no-repeat;
+}
+
+div.social-icon-git{
+  background: url(/images/git-final-hover.png) no-repeat;
+}
+
+div.social-icon-linkedin,div.social-icon-git{
+  width: 48px;
+  height: 48px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+div.social-icon-linkedin:hover, div.social-icon-git:hover {
+  background-position: 0px -48px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+div.content-about-text span{
+  display: inline-block;
+}
+
+div.content-about-images{
+  padding: 15px;
+  border: 1px solid #a2a2a2;
+  margin-top: 20px;
+  position: relative;
+}
+
+div.content-about-images >div.social-icon{
+  margin-right: 15px;
+}
+
+div.connect-label{
+  position: absolute;
+  background: rgb(242,242,242);
+  top: -12px;
+  padding: 0 5px;
+}
+
+.about-who-lbl{
+  font-size: 16px;
+}
+
+.heart-icon{
+  width: 16px;
+  height: 16px;
+  background: url(/images/heart.png) no-repeat;
+}
+
+.content-about .heart-icon{
+  vertical-align: -13%;
+  margin-left: 3px;
+}
+
+div.content-about{
+  padding: 25px;
 }
 
 /* Extra Small */

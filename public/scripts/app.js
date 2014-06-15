@@ -19,7 +19,12 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 			url : '/about',
 			templateUrl : '/html/about.html',
 			controller : 'aboutController'
-		})		
+		})
+        .state('login', {
+            url : '/login',
+            templateUrl : '/html/login.html',
+            controller : 'loginController'
+        })		
 
 		// use the HTML5 History API
 		$locationProvider.html5Mode(true).hashPrefix('!');
@@ -93,6 +98,10 @@ app.controller('eventListController', function($scope) {
 
 app.controller('aboutController', function($scope) {
 	console.log("inside about controller");
+});
+
+app.controller('loginController', function($scope) {
+    console.log("inside login controller");
 })
 	
 
