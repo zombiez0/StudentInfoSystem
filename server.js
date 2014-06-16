@@ -7,11 +7,16 @@ var logfmt = require("logfmt");
 //var port = 8080;
 var port = Number(process.env.PORT || 5000);
 var configDB = require(__dirname + '/public/scripts/database.js');
+var passport = require('passport');
+var flash = require('connect-flash');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 //mongoose.connect(configDB.url);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser());
 app.use(logfmt.requestLogger());
+app.use(cookieParser()); // read cookies (needed for auth)
 app.use(require('prerender-node').set('prerenderToken', '0SWH5ZjfHK0nACDhpx6E'));
 
 //http://vladimirfeskov.com/posts/angularjs-html5-mode-setup-use-and-seo
@@ -22,6 +27,12 @@ app.use(require('prerender-node').set('prerenderToken', '0SWH5ZjfHK0nACDhpx6E'))
 //http://tympanus.net/codrops/2013/06/26/expanding-search-bar-deconstructed/
 //http://www.callmenick.com/2013/04/03/expanding-search-bar-using-css-transitions/
 //http://www.bootply.com/117591#
+
+// required for passport
+app.use(session({ secret: 'studentappsecret' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
 /* Express Router */
 var router = express.Router();

@@ -6,7 +6,13 @@
 		"mongoose" : "~3.8.8",
 		"body-parser" : "~1.0.2",
 		"prerender-node": "latest",
-		"logfmt" : "latest"
+		"logfmt" : "latest",
+		"passport" : "latest",
+		"passport-local" : "latest",
+		"connect-flash" : "latest", 	
+    	"bcrypt-nodejs" : "latest",
+    	"cookie-parser" : "latest",
+    	"express-session" : "latest"
 	},
 	"engines": {
         "node": "0.10.28"
